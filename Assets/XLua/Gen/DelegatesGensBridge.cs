@@ -258,7 +258,56 @@ namespace XLua
 #endif
 		}
         
-		public int __Gen_Delegate_Imp11(int p0, string p1, out Tutorial.CSCallLua.DClass p2)
+		public void __Gen_Delegate_Imp11(Loxodon.Framework.Views.IUIView p0, System.Action p1, System.Action p2)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                translator.Push(L, p1);
+                translator.Push(L, p2);
+                
+                PCall(L, 3, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp12(Loxodon.Framework.Views.Animations.LuaUIAnimation p0, Loxodon.Framework.Views.IUIView p1, System.Action p2, System.Action p3)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.Push(L, p0);
+                translator.PushAny(L, p1);
+                translator.Push(L, p2);
+                translator.Push(L, p3);
+                
+                PCall(L, 4, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public int __Gen_Delegate_Imp13(int p0, string p1, out Tutorial.CSCallLua.DClass p2)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -282,7 +331,7 @@ namespace XLua
 #endif
 		}
         
-		public System.Action __Gen_Delegate_Imp12()
+		public System.Action __Gen_Delegate_Imp14()
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -303,7 +352,7 @@ namespace XLua
 #endif
 		}
         
-		public XLuaTest.InvokeLua.ICalc __Gen_Delegate_Imp13(int p0, string[] p1)
+		public XLuaTest.InvokeLua.ICalc __Gen_Delegate_Imp15(int p0, string[] p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -326,7 +375,208 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp14(object p0)
+		public void __Gen_Delegate_Imp16(XLua.LuaTable p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.Push(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp17(UnityEngine.MonoBehaviour p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.Push(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public Loxodon.Framework.Asynchronous.ILuaTask __Gen_Delegate_Imp18(UnityEngine.MonoBehaviour p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.Push(L, p0);
+                
+                PCall(L, 1, 1, errFunc);
+                
+                
+                Loxodon.Framework.Asynchronous.ILuaTask __gen_ret = (Loxodon.Framework.Asynchronous.ILuaTask)translator.GetObject(L, errFunc + 1, typeof(Loxodon.Framework.Asynchronous.ILuaTask));
+                LuaAPI.lua_settop(L, errFunc - 1);
+                return  __gen_ret;
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp19(Loxodon.Framework.Views.IWindow p0, Loxodon.Framework.Views.WindowState p1)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                translator.Push(L, p1);
+                
+                PCall(L, 2, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp20(Loxodon.Framework.Views.LuaWindow p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.Push(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp21(Loxodon.Framework.Views.LuaWindow p0, Loxodon.Framework.Views.IBundle p1)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.Push(L, p0);
+                translator.PushAny(L, p1);
+                
+                PCall(L, 2, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp22(object p0, System.Collections.Specialized.NotifyCollectionChangedEventArgs p1)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                translator.Push(L, p1);
+                
+                PCall(L, 2, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp23(float p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                
+                LuaAPI.lua_pushnumber(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp24(int p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                
+                LuaAPI.xlua_pushinteger(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp25(object p0)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -348,7 +598,118 @@ namespace XLua
 #endif
 		}
         
-		public int __Gen_Delegate_Imp15(object p0, int p1, int p2)
+		public void __Gen_Delegate_Imp26(System.Exception p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.Push(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp27(Loxodon.Framework.Asynchronous.IAsyncResult p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                
+                PCall(L, 1, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp28(object p0, Loxodon.Framework.Views.WindowStateEventArgs p1)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                translator.Push(L, p1);
+                
+                PCall(L, 2, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp29(object p0, System.EventArgs p1)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                translator.PushAny(L, p0);
+                translator.Push(L, p1);
+                
+                PCall(L, 2, 0, errFunc);
+                
+                
+                
+                LuaAPI.lua_settop(L, errFunc - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public object __Gen_Delegate_Imp30()
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int errFunc = LuaAPI.pcall_prepare(L, errorFuncRef, luaReference);
+                ObjectTranslator translator = luaEnv.translator;
+                
+                PCall(L, 0, 1, errFunc);
+                
+                
+                object __gen_ret = translator.GetObject(L, errFunc + 1, typeof(object));
+                LuaAPI.lua_settop(L, errFunc - 1);
+                return  __gen_ret;
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public int __Gen_Delegate_Imp31(object p0, int p1, int p2)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -372,7 +733,7 @@ namespace XLua
 #endif
 		}
         
-		public UnityEngine.Vector3 __Gen_Delegate_Imp16(object p0, UnityEngine.Vector3 p1, UnityEngine.Vector3 p2)
+		public UnityEngine.Vector3 __Gen_Delegate_Imp32(object p0, UnityEngine.Vector3 p1, UnityEngine.Vector3 p2)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -396,7 +757,7 @@ namespace XLua
 #endif
 		}
         
-		public int __Gen_Delegate_Imp17(object p0, int p1, out double p2, ref string p3)
+		public int __Gen_Delegate_Imp33(object p0, int p1, out double p2, ref string p3)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -422,7 +783,7 @@ namespace XLua
 #endif
 		}
         
-		public int __Gen_Delegate_Imp18(object p0, int p1, out double p2, ref string p3, object p4)
+		public int __Gen_Delegate_Imp34(object p0, int p1, out double p2, ref string p3, object p4)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -449,7 +810,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp19(object p0, int p1)
+		public void __Gen_Delegate_Imp35(object p0, int p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -472,7 +833,7 @@ namespace XLua
 #endif
 		}
         
-		public string __Gen_Delegate_Imp20(object p0)
+		public string __Gen_Delegate_Imp36(object p0)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -494,7 +855,7 @@ namespace XLua
 #endif
 		}
         
-		public UnityEngine.GameObject __Gen_Delegate_Imp21(XLuaTest.StructTest p0, int p1, object p2)
+		public UnityEngine.GameObject __Gen_Delegate_Imp37(XLuaTest.StructTest p0, int p1, object p2)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -518,7 +879,7 @@ namespace XLua
 #endif
 		}
         
-		public string __Gen_Delegate_Imp22(XLuaTest.StructTest p0)
+		public string __Gen_Delegate_Imp38(XLuaTest.StructTest p0)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -540,7 +901,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp23(XLuaTest.StructTest p0, object p1)
+		public void __Gen_Delegate_Imp39(XLuaTest.StructTest p0, object p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -563,7 +924,7 @@ namespace XLua
 #endif
 		}
         
-		public int __Gen_Delegate_Imp24(object p0)
+		public int __Gen_Delegate_Imp40(object p0)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -585,7 +946,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp25(object p0, object p1)
+		public void __Gen_Delegate_Imp41(object p0, object p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -608,7 +969,7 @@ namespace XLua
 #endif
 		}
         
-		public int __Gen_Delegate_Imp26(object p0, object p1)
+		public int __Gen_Delegate_Imp42(object p0, object p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -631,7 +992,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp27(object p0, object p1, int p2)
+		public void __Gen_Delegate_Imp43(object p0, object p1, int p2)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -655,7 +1016,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp28(int p0, int p1)
+		public void __Gen_Delegate_Imp44(int p0, int p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -678,7 +1039,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp29(object p0, int p1, int p2)
+		public void __Gen_Delegate_Imp45(object p0, int p1, int p2)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -771,19 +1132,104 @@ namespace XLua
 			    return new System.Action<bool>(__Gen_Delegate_Imp10);
 			}
 		
+		    if (type == typeof(Loxodon.Framework.Views.Animations.AnimationAction))
+			{
+			    return new Loxodon.Framework.Views.Animations.AnimationAction(__Gen_Delegate_Imp11);
+			}
+		
+		    if (type == typeof(Loxodon.Framework.Views.Animations.LuaAnimationAction))
+			{
+			    return new Loxodon.Framework.Views.Animations.LuaAnimationAction(__Gen_Delegate_Imp12);
+			}
+		
 		    if (type == typeof(Tutorial.CSCallLua.FDelegate))
 			{
-			    return new Tutorial.CSCallLua.FDelegate(__Gen_Delegate_Imp11);
+			    return new Tutorial.CSCallLua.FDelegate(__Gen_Delegate_Imp13);
 			}
 		
 		    if (type == typeof(Tutorial.CSCallLua.GetE))
 			{
-			    return new Tutorial.CSCallLua.GetE(__Gen_Delegate_Imp12);
+			    return new Tutorial.CSCallLua.GetE(__Gen_Delegate_Imp14);
 			}
 		
 		    if (type == typeof(XLuaTest.InvokeLua.CalcNew))
 			{
-			    return new XLuaTest.InvokeLua.CalcNew(__Gen_Delegate_Imp13);
+			    return new XLuaTest.InvokeLua.CalcNew(__Gen_Delegate_Imp15);
+			}
+		
+		    if (type == typeof(System.Action<XLua.LuaTable>))
+			{
+			    return new System.Action<XLua.LuaTable>(__Gen_Delegate_Imp16);
+			}
+		
+		    if (type == typeof(System.Action<UnityEngine.MonoBehaviour>))
+			{
+			    return new System.Action<UnityEngine.MonoBehaviour>(__Gen_Delegate_Imp17);
+			}
+		
+		    if (type == typeof(System.Func<UnityEngine.MonoBehaviour, Loxodon.Framework.Asynchronous.ILuaTask>))
+			{
+			    return new System.Func<UnityEngine.MonoBehaviour, Loxodon.Framework.Asynchronous.ILuaTask>(__Gen_Delegate_Imp18);
+			}
+		
+		    if (type == typeof(System.Action<Loxodon.Framework.Views.IWindow, Loxodon.Framework.Views.WindowState>))
+			{
+			    return new System.Action<Loxodon.Framework.Views.IWindow, Loxodon.Framework.Views.WindowState>(__Gen_Delegate_Imp19);
+			}
+		
+		    if (type == typeof(System.Action<Loxodon.Framework.Views.LuaWindow>))
+			{
+			    return new System.Action<Loxodon.Framework.Views.LuaWindow>(__Gen_Delegate_Imp20);
+			}
+		
+		    if (type == typeof(System.Action<Loxodon.Framework.Views.LuaWindow, Loxodon.Framework.Views.IBundle>))
+			{
+			    return new System.Action<Loxodon.Framework.Views.LuaWindow, Loxodon.Framework.Views.IBundle>(__Gen_Delegate_Imp21);
+			}
+		
+		    if (type == typeof(System.Collections.Specialized.NotifyCollectionChangedEventHandler))
+			{
+			    return new System.Collections.Specialized.NotifyCollectionChangedEventHandler(__Gen_Delegate_Imp22);
+			}
+		
+		    if (type == typeof(System.Action<float>))
+			{
+			    return new System.Action<float>(__Gen_Delegate_Imp23);
+			}
+		
+		    if (type == typeof(System.Action<int>))
+			{
+			    return new System.Action<int>(__Gen_Delegate_Imp24);
+			}
+		
+		    if (type == typeof(System.Action<object>))
+			{
+			    return new System.Action<object>(__Gen_Delegate_Imp25);
+			}
+		
+		    if (type == typeof(System.Action<System.Exception>))
+			{
+			    return new System.Action<System.Exception>(__Gen_Delegate_Imp26);
+			}
+		
+		    if (type == typeof(System.Action<Loxodon.Framework.Asynchronous.IAsyncResult>))
+			{
+			    return new System.Action<Loxodon.Framework.Asynchronous.IAsyncResult>(__Gen_Delegate_Imp27);
+			}
+		
+		    if (type == typeof(System.EventHandler<Loxodon.Framework.Views.WindowStateEventArgs>))
+			{
+			    return new System.EventHandler<Loxodon.Framework.Views.WindowStateEventArgs>(__Gen_Delegate_Imp28);
+			}
+		
+		    if (type == typeof(System.EventHandler))
+			{
+			    return new System.EventHandler(__Gen_Delegate_Imp29);
+			}
+		
+		    if (type == typeof(System.Func<object>))
+			{
+			    return new System.Func<object>(__Gen_Delegate_Imp30);
 			}
 		
 		    return null;
